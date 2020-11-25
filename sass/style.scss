@@ -2,18 +2,46 @@
 $fonteTexto: Poppins;
 $fonteTitulo: Roboto;
 
+//mixing são blocos reutilizaveis/ bastante usado nos prefixos de navegadores
+@mixin titulo {
+    display: flex;
+    justify-content: center;
+}
+
+//vai ler a cor q eu passar como argumento(pode ler mais de um argumento)
+@mixin color($color: white){ //valor padrão
+    color: $color;
+}
+
+@mixin separador{
+    &:hover{
+        background: $primaria;
+        @include sombra(-10px 7px 0px);
+        transition: 0.5s;
+    }
+}
+
+//... spread, para usar um argumento mais uma vez
+@mixin sombra($agumentos... ){
+    box-shadow: $agumentos black;
+    -moz-box-shadow: $agumentos black;
+    -webkit-box-shadow: $agumentos black;
+}
+
+@mixin mobile {
+    @media (max-width: 600px){
+        @content;//permite mudar o contexto do arquivo
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 section{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
+    //mixing
+    @include titulo;
     flex-direction: row;
     align-items: center;
     width: 100%;
@@ -23,42 +51,50 @@ section{
         height: 17em;
         position: relative;
         h1{
-            font-size: xx-large;
-            font-weight: 600;
-            font-family: $fonteTitulo, sans-serif;
+            //Nesting
+            font: {
+                size:xx-large;
+                weight:600;
+                family: $fonteTitulo, sans-serif;
+            };
             letter-spacing: 0.1ch;
-            color: $primaria;
+            @include color($primaria);
             text-indent:1em;
             border-left: 5px solid $primaria;
+            @include mobile{
+                color: #84e;
+            }
         }
         p{
-            color: $text;
+            @include color($text);
             font-family: $fonteTexto, sans-serif;
+            font-size: 1em;
             text-align: start;
             text-indent:2em;
             margin-top:20px;
             line-height: 1.25em;
-            font-size: 1em; 
         }
         span{
-            color: $text;
+            @include color($text);
             font-weight: bold;
             position: absolute;
             margin-top: 1em;
             left: 0;
         }
         a{
-            color: white;
+            @include color(white);
             text-decoration: none;
             font-family: $fonteTitulo, sans-serif;
+            font-weight: 600;
             background: $complementar;
             text-transform: uppercase;
             padding: 10px 25px 10px 25px;
             border-radius: 50px;
-            font-weight: 600;
             position: absolute;
             bottom: 0;
             right: 0;
+            @include separador;
+            //& Nesting, pra grudar class/ ou sintaxe do próprio css
         }
     }
 }
