@@ -1,3 +1,7 @@
+div::after {
+  content: "";
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +32,7 @@ section div h1 {
 }
 @media (max-width: 600px) {
   section div h1 {
-    color: #84e;
+    color: #84f;
   }
 }
 section div p {
@@ -52,7 +56,7 @@ section div a {
   text-decoration: none;
   font-family: Roboto, sans-serif;
   font-weight: 600;
-  background: #E0419C;
+  background: red;
   text-transform: uppercase;
   padding: 10px 25px 10px 25px;
   border-radius: 50px;
@@ -65,7 +69,7 @@ section div a:hover {
   box-shadow: -10px 7px 0px black;
   -moz-box-shadow: -10px 7px 0px black;
   -webkit-box-shadow: -10px 7px 0px black;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 /*# sourceMappingURL=style.css.map */

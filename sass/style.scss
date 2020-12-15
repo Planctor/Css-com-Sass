@@ -2,6 +2,16 @@
 $fonteTexto: Poppins;
 $fonteTitulo: Roboto;
 
+//item não existe no css
+%clearfix::after{
+    content: ''
+}
+
+//semelhante ao mixing, reaproveita um bloco de codigos... não muito usado pois pode causar erros
+div{
+    @extend %clearfix;
+}
+
 //mixing são blocos reutilizaveis/ bastante usado nos prefixos de navegadores
 @mixin titulo {
     display: flex;
@@ -9,7 +19,7 @@ $fonteTitulo: Roboto;
 }
 
 //vai ler a cor q eu passar como argumento(pode ler mais de um argumento)
-@mixin color($color: white){ //valor padrão
+@mixin color($color: white){ //valor padrão, semelhante há um if
     color: $color;
 }
 
@@ -17,8 +27,13 @@ $fonteTitulo: Roboto;
     &:hover{
         background: $primaria;
         @include sombra(-10px 7px 0px);
-        transition: 0.5s;
+        transition: 0.1s;
     }
+}
+
+@mixin tamanho{
+    width: 100%;
+    height: 100vh;
 }
 
 //... spread, para usar um argumento mais uma vez
@@ -44,8 +59,7 @@ section{
     @include titulo;
     flex-direction: row;
     align-items: center;
-    width: 100%;
-    height: 100vh;
+    @include tamanho;
     div{
         width: 25em;
         height: 17em;
@@ -62,7 +76,7 @@ section{
             text-indent:1em;
             border-left: 5px solid $primaria;
             @include mobile{
-                color: #84e;
+                color: #84f;
             }
         }
         p{
