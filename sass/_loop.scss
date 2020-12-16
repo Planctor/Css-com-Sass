@@ -1,0 +1,34 @@
+@for $i from 1 to 5{
+    $width: percentage($i / 10);
+    item-#{$i}{
+        width: $width;
+    }
+}
+
+$tamanho : 1200px;
+$gutter : 20px;
+$colunas : 12px;
+
+@for $a from 1 to $colunas {
+    $width : $tamanho / $colunas * $a - $gutter;
+    .grid-#{a}{
+        width: $width;
+    }
+}
+
+$b: 1;
+@while $b <= 6 {
+    .type-#{b}{
+        font-size: 16 * $b;
+    }
+    $b: $b + 1;
+}
+
+
+$redes: fb,tw,ytb,inst;
+
+@each $contador in $redes {
+    .rede-#{$redes}{
+        background: url('img-#{$contador}');
+    }
+}

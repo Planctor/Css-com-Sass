@@ -1,3 +1,103 @@
+item-1 {
+  width: 10%;
+}
+
+item-2 {
+  width: 20%;
+}
+
+item-3 {
+  width: 30%;
+}
+
+item-4 {
+  width: 40%;
+}
+
+.grid-a {
+  width: 80px;
+}
+
+.grid-a {
+  width: 180px;
+}
+
+.grid-a {
+  width: 280px;
+}
+
+.grid-a {
+  width: 380px;
+}
+
+.grid-a {
+  width: 480px;
+}
+
+.grid-a {
+  width: 580px;
+}
+
+.grid-a {
+  width: 680px;
+}
+
+.grid-a {
+  width: 780px;
+}
+
+.grid-a {
+  width: 880px;
+}
+
+.grid-a {
+  width: 980px;
+}
+
+.grid-a {
+  width: 1080px;
+}
+
+.type-b {
+  font-size: 16;
+}
+
+.type-b {
+  font-size: 32;
+}
+
+.type-b {
+  font-size: 48;
+}
+
+.type-b {
+  font-size: 64;
+}
+
+.type-b {
+  font-size: 80;
+}
+
+.type-b {
+  font-size: 96;
+}
+
+.rede-fb, tw, ytb, inst {
+  background: url("img-fb");
+}
+
+.rede-fb, tw, ytb, inst {
+  background: url("img-tw");
+}
+
+.rede-fb, tw, ytb, inst {
+  background: url("img-ytb");
+}
+
+.rede-fb, tw, ytb, inst {
+  background: url("img-inst");
+}
+
 * {
   margin: 0;
   padding: 0px;
