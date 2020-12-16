@@ -1,10 +1,6 @@
-div::after {
-  content: "";
-}
-
 * {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -23,12 +19,12 @@ section div {
 }
 section div h1 {
   font-size: xx-large;
-  font-weight: 600;
+  font-weight: 6000/10;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.1ch;
-  color: #4BE042;
+  color: #D41E21;
   text-indent: 1em;
-  border-left: 5px solid #4BE042;
+  border-left: 5px solid #D41E21;
 }
 @media (max-width: 600px) {
   section div h1 {
@@ -36,7 +32,7 @@ section div h1 {
   }
 }
 section div p {
-  color: #3B6139;
+  color: #FF751A;
   font-family: Poppins, sans-serif;
   font-size: 1em;
   text-align: start;
@@ -45,7 +41,7 @@ section div p {
   line-height: 1.25em;
 }
 section div span {
-  color: #3B6139;
+  color: #FF751A;
   font-weight: bold;
   position: absolute;
   margin-top: 1em;
@@ -56,7 +52,7 @@ section div a {
   text-decoration: none;
   font-family: Roboto, sans-serif;
   font-weight: 600;
-  background: red;
+  background: #04A46A;
   text-transform: uppercase;
   padding: 10px 25px 10px 25px;
   border-radius: 50px;
@@ -65,11 +61,11 @@ section div a {
   right: 0;
 }
 section div a:hover {
-  background: #4BE042;
-  box-shadow: -10px 7px 0px black;
-  -moz-box-shadow: -10px 7px 0px black;
-  -webkit-box-shadow: -10px 7px 0px black;
-  transition: 0.1s;
+  background: #D41E21;
+  box-shadow: -10px 7px 0px #7b1113;
+  -moz-box-shadow: -10px 7px 0px #ea6e70;
+  -webkit-box-shadow: -10px 7px 0px rgba(212, 30, 33, 0.5);
+  transition: 0.8s;
 }
 
 /*# sourceMappingURL=style.css.map */

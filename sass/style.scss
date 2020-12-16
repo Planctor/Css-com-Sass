@@ -2,6 +2,11 @@
 $fonteTexto: Poppins;
 $fonteTitulo: Roboto;
 
+//função para converter pixel em EM
+@function em($p, $contexto: 16){
+    @return ($p / $contexto) * 1em
+}
+
 // //item não existe no css
 // %clearfix::after{
 //     content: ''
@@ -38,9 +43,9 @@ $fonteTitulo: Roboto;
 
 //... spread, para usar um argumento mais uma vez
 @mixin sombra($agumentos... ){
-    box-shadow: $agumentos black;
-    -moz-box-shadow: $agumentos black;
-    -webkit-box-shadow: $agumentos black;
+    box-shadow: $agumentos  darken($primaria, 20%);//função para escurecer
+    -moz-box-shadow: $agumentos lighten($primaria, 20%);//função para clarear
+    -webkit-box-shadow: $agumentos transparentize($primaria, .5);//função para dx cor transparent
 }
 
 @mixin mobile {
@@ -87,13 +92,13 @@ section{
             text-align: start;
             text-indent:2em;
             margin-top:20px;
-            line-height: 1.25em;
+            line-height: em(20);
         }
         span{
             @include color($text);
             font-weight: bold;
             position: absolute;
-            margin-top: 1em;
+            margin-top: em(16);
             left: 0;
         }
         a{
