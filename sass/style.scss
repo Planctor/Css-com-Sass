@@ -2,15 +2,15 @@
 $fonteTexto: Poppins;
 $fonteTitulo: Roboto;
 
-//item não existe no css
-%clearfix::after{
-    content: ''
-}
+// //item não existe no css
+// %clearfix::after{
+//     content: ''
+// }
 
-//semelhante ao mixing, reaproveita um bloco de codigos... não muito usado pois pode causar erros
-div{
-    @extend %clearfix;
-}
+// //semelhante ao mixing, reaproveita um bloco de codigos... não muito usado pois pode causar erros
+// div{
+//     @extend %clearfix;
+// }
 
 //mixing são blocos reutilizaveis/ bastante usado nos prefixos de navegadores
 @mixin titulo {
@@ -27,7 +27,7 @@ div{
     &:hover{
         background: $primaria;
         @include sombra(-10px 7px 0px);
-        transition: 0.1s;
+        transition: 0.8s;
     }
 }
 
@@ -54,6 +54,7 @@ div{
     padding: 40px - 40;
     box-sizing: border-box;
 }
+
 section{
     //mixing
     @include titulo;
@@ -61,14 +62,14 @@ section{
     align-items: center;
     @include tamanho;
     div{
-        width: 250em / 100;
+        width: 25em;
         height: 17em;
         position: relative;
         h1{
             //Nesting
             font: {
                 size:xx-large;
-                weight:600;
+                weight:6000 / 10;
                 family: $fonteTitulo, sans-serif;
             };
             letter-spacing: 0.1ch;

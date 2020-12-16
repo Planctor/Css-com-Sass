@@ -1,3 +1,16 @@
 $primaria: #4BE042;
 $text : #3B6139;
-$complementar : red;
+$complementar : #E0419C;
+
+//exemplo de if em sass
+$tema: laranja;
+
+@if $tema == azul {
+    $primaria: #044BD9;
+    $text : #033E8C;
+    $complementar : #F21905;
+}@else if $tema == laranja {
+    $primaria: #D41E21;
+    $text :#FF751A;
+    $complementar : #04A46A;
+}
